@@ -15,7 +15,7 @@ public class Author {
     private Long id;
     private String firstName;
     private String lastName;
-
+    //这里要改成mappedby targetside
     @ManyToMany(mappedBy = "authors")
     private Set<Book> books  = new HashSet<>();
 
