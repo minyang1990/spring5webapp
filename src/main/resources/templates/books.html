@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--这里namespace 很重要 xmlns-->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
@@ -13,6 +14,7 @@
         <th>Title</th>
         <th>Publisher</th>
     </tr>
+    <!--这里用了 thymeleaf 的iterator 注意这里的123 wrox 啥的 在spring run之后会被覆写 只是测试看看效果-->
     <tr th:each="book : ${books}">
         <td th:text="${book.id}">123</td>
         <td th:text="${book.title}">Spring in Action</td>
